@@ -1,0 +1,61 @@
+Your API key: lyRPohfF951Qjty1I8ABbgLPc8aRVP02PuJHnoOHWUvvGTEwXSZWIcXt
+
+
+
+
+
+
+
+function uploadfile() {
+    var filename = $('#filename').val();                    //To save file with this name
+    console.log(filename, "filename")
+    var file_data = $('.fileToUpload').prop('files')[0];    //Fetch the file
+    console.log(file_data, "file_data")
+    var form_data = new FormData();
+    form_data.append("file", file_data);
+    form_data.append("filename", filename);
+    //Ajax to send file to upload
+    $.ajax({
+        url: "load.php",                      //Server api to receive the file
+        type: "POST",
+        dataType: 'script',
+        cache: false,
+        contentType: false,
+        processData: false,
+        data: form_data,
+
+        success: function (dat2) {
+            if (dat2 == 1) alert("Successful");
+            else alert("Unable to Upload");
+        }
+    });
+
+}
+
+function uploadImage() {
+    /* TODO: Send image to img/products AJAX*/
+    xhr = new XMLHttpRequest();
+    url = "ajax/uploadProductImage.ajax.php";
+    xhr.open("POST", url, true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState < 4) {
+            console.log("uploading image ajax is connecting");
+        }
+        if (xhr.readyState == 4 && xhr.status != 200) {
+            console.log("uploading image ajax is failed");
+        }
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            console.log("uploading image ajax executed");
+        }
+    };
+    xhr.send();
+
+
+    /* TODO: Send update form & display to img/products */
+    /* TODO: Send update form & display to img/products */
+}
+
+
+$("#UploadProductButton").click(uploadfile)
+
+
