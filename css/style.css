@@ -1,0 +1,393 @@
+* {
+    box-sizing: border-box;
+    font-weight: 500;
+    font-size: 1.2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@font-face {
+    font-family: 'Heading';
+    src: url('MomcakeBold-WyonA.otf');
+    font-weight: 500px;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Main';
+    src: url('RamusRegular-VGw8w.ttf');
+    font-weight: 500px;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'label';
+    src: url('RamusSemiBold-JRlnx.ttf');
+    font-weight: 500px;
+}
+@font-face {
+    font-family: 'Sign';
+    src: url('HousttelySignature-GOonZ.ttf');
+    font-weight: 800px;
+}
+
+
+.sign{
+    font-family: 'Sign';
+}
+
+h2 {
+    font-family: 'Heading';
+}
+
+h1,
+h3 {
+    font-family: 'Main';
+}
+
+p,
+li {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.logo {
+    border-radius: 4%;
+}
+
+.bg-image{
+    font-family: 'Heading';
+    position: relative;
+    min-height: 100vh;
+    padding-top: 30vh;
+    padding-bottom: 10vh;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.78);
+    
+}
+.bg-image::after{
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(60%);
+    z-index: -1;
+}
+
+.weed::after{
+    background-image: url('../img/shocker.jpg');
+}
+
+
+#aboutUs {
+    font-family: 'Heading';
+    position: relative;
+    min-height: 80vh;
+    padding-top: 30vh;
+    padding-bottom: 10vh;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.78);
+}
+
+#aboutUs::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/aboutus.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.6);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+
+.svg {
+    position: relative;
+}
+
+.svg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-color: orange;
+}
+
+.products {
+    max-height: 100px;
+}
+
+#products {
+    position: relative;
+}
+
+#products::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/pray.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+#products img.product {
+    max-width: 30vh;
+    max-height: 50vh;
+    border-radius: 2%;
+    transition: all ease-in 400ms;
+    object-fit: cover;
+}
+
+#products img.product:hover {
+    border-radius: 5%;
+    transform: scale(1.12);
+}
+
+
+li {
+    list-style: none;
+}
+
+button {
+    transition: all 200ms ease-out;
+    background-color: rgba(0, 0, 0, 0.093);
+    border: none;
+}
+
+button:hover {
+    scale: 1.2;
+    color: rgb(111, 35, 0);
+    border-bottom: solid black 1.2px;
+}
+
+
+.blober {
+    border-radius: 47% 53% 70% 30% / 30% 58% 42% 70%;
+    transition: all 400ms ease-in-out;
+    scale: 1;
+}
+
+.blober:hover {
+    border-radius: 59% 41% 29% 71% / 57% 62% 38% 43%;
+    scale: 0.92;
+}
+
+.blob>* {
+    grid-area: stack;
+    animation: parallax linear;
+    animation-timeline: scroll();
+}
+
+@keyframes parallax {
+    to {
+        transform: translateY(200px);
+    }
+}
+
+#pfp {
+    min-height: 5vh;
+    min-width: 5vw;
+    max-height: 20vh;
+    max-width: 20vw;
+    border-radius: 50%;
+}
+
+.online {
+    position: relative;
+    font-weight: 300px;
+}
+
+.online::before {
+    content: '';
+    position: absolute;
+    top: 1.2vh;
+    left: -1.6vw;
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+    margin-right: 100px;
+}
+
+.offline {
+    position: relative;
+    font-weight: 300px;
+}
+
+.offline::before {
+    content: '';
+    position: absolute;
+    top: 1.2vh;
+    left: -1.8vw;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 100px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.message {
+    border-radius: 15px;
+}
+
+.right {
+    right: 0;
+}
+
+#tasbee {
+    font-family: 'Heading';
+    position: relative;
+    min-height: 100vh;
+    padding-top: 30vh;
+    padding-bottom: 10vh;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.78);
+}
+
+#tasbee::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/tasbee.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    z-index: -1;
+    transition: all ease-in 400ms;
+}
+
+#tasee::after:hover {
+    filter: blur(100px);
+}
+
+
+body::-webkit-scrollbar {
+    width: 12px;
+    /* Set the width of the scrollbar */
+    z-index: 0;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: teal;
+    /* Set the color of the scrollbar thumb to teal */
+    border-radius: 6px;
+    /* Set the border radius of the scrollbar thumb */
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+    /* Set the color of the scrollbar track */
+}
+
+#log {
+    z-index: 111;
+    position: fixed;
+    top: 2vh;
+    right: 1vw;
+}
+
+
+/* RESPONSIVE */
+
+iframe {
+    width: 80%;
+    height: 70vh;
+}
+
+
+
+#productImageContainer {
+    position: relative;
+}
+
+#ownImage {
+    position: absolute;
+    font-size: 2rem;
+    top: 30%;
+    right: 0;
+    cursor: pointer;
+    transition: all 200ms ease-out;
+}
+
+#ownImage:hover {
+    font-size: 4rem;
+    top: 0%;
+}
+
+
+#UploadProductButton {
+    position: absolute;
+    left: 50%;
+}
+
+#formImgUpload {
+    display: none;
+}
+
+#span {
+    position: absolute;
+    font-size: 1rem;
+    top: 30%;
+    right: 0;
+    cursor: pointer;
+    transition: all 200ms ease-out;
+}
+
+#span:hover {
+    font-size: 1.2rem;
+    top: 0%;
+}
+
+
+#footer svg{
+    width: 32px;
+    height: 32px;
+  }
+
+
+  .selectable{
+    cursor: pointer;
+    border-radius: 1%;
+    transition: all ease-in-out 200ms;
+    filter: blur(3px);
+  }  
+  
+  .selectable:hover{
+    filter: none;
+    border-radius: 3%;
+  }
+
+  .biggest {
+    font-size: 9rem;
+  }

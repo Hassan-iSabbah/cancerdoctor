@@ -1,0 +1,84 @@
+#toast {
+    width: 100%;
+    max-width: 450px;
+    background: #f8ffff;
+    border: 1px solid #bedfe6;
+    border-left: 5px solid #2185d0;
+    border-radius: 5px;
+    padding: 15px;
+  
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+
+  #toast.top {
+    top: 8vh;
+    bottom: auto;
+  }
+  
+  #toast.right {
+    left: auto;
+    right: 20px;
+  }
+  
+  #toast.left {
+    left: 20px;
+    right: auto;
+  }
+  
+  #toast.success {
+    background: #fbfff8;
+    border: 1px solid #bee6bf;
+    border-left: 8px solid #38d021;
+  }
+  
+  #toast.error {
+    background: #fff8f8;
+    border: 1px solid #e6bebe;
+    border-left: 5px solid #d02121;
+  }
+  
+  #toast.warning {
+    background: #fffbf8;
+    border: 1px solid #e6d0be;
+    border-left: 5px solid #d06421;
+  }
+
+  .neon-text {
+    position: relative;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    width: 100%;
+    text-align: center;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+    line-height: 0.7em;
+    outline: none;
+    
+    color: white;
+    text-shadow: 0 0 10px #03bcf4,
+     0 0 20px #03bcf4, 
+     0 0 40px #03bcf4, 
+     0 0 80px #03bcf4, 
+     0 0 160px #03bcf4;
+  
+  }  
+  
+  
+  .out-text {
+    position: relative;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    width: 100%;
+    text-align: center;
+    line-height: 1.7em;
+    
+    color: white;
+    text-shadow: 0 0 5px black;
+  
+  }
