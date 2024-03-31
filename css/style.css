@@ -24,6 +24,7 @@
     src: url('RamusSemiBold-JRlnx.ttf');
     font-weight: 500px;
 }
+
 @font-face {
     font-family: 'Sign';
     src: url('HousttelySignature-GOonZ.ttf');
@@ -31,7 +32,7 @@
 }
 
 
-.sign{
+.sign {
     font-family: 'Sign';
 }
 
@@ -53,7 +54,7 @@ li {
     border-radius: 4%;
 }
 
-.bg-image{
+.bg-image {
     font-family: 'Heading';
     position: relative;
     min-height: 100vh;
@@ -61,9 +62,10 @@ li {
     padding-bottom: 10vh;
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.78);
-    
+
 }
-.bg-image::after{
+
+.bg-image::after {
 
     content: "";
     position: absolute;
@@ -79,7 +81,7 @@ li {
     z-index: -1;
 }
 
-.weed::after{
+.weed::after {
     background-image: url('../img/shocker.jpg');
 }
 
@@ -370,24 +372,65 @@ iframe {
 }
 
 
-#footer svg{
+#footer svg {
     width: 32px;
     height: 32px;
-  }
+}
 
 
-  .selectable{
+.selectable {
     cursor: pointer;
     border-radius: 1%;
     transition: all ease-in-out 200ms;
     filter: blur(3px);
-  }  
-  
-  .selectable:hover{
+}
+
+.selectable:hover {
     filter: none;
     border-radius: 3%;
-  }
+}
 
-  .biggest {
+.biggest {
     font-size: 7vw;
-  }
+}
+
+svg {
+    min-width: 5vw;
+    min-height: 5vh;
+    padding: 10px;
+    transition: all ease-in-out 300ms;
+    animation-name: alive;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Define animation delays for each SVG */
+svg:nth-child(1) {
+    animation-delay: 0s;
+    /* No delay for the first SVG */
+}
+
+svg:nth-child(2) {
+    animation-delay: 0.6s;
+    /* 0.2s delay for the second SVG */
+}
+
+
+
+@keyframes alive {
+    0% {
+        scale: 1;
+    }
+
+    20% {
+        scale: 0.7;
+    }
+
+    100% {
+        scale: 1.1;
+    }
+}
