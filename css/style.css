@@ -129,7 +129,9 @@ li {
 }
 
 .products {
-    max-height: 100px;
+    width:100vw;
+    height:50vh;
+    object-fit: cover;
 }
 
 #products {
